@@ -1,0 +1,151 @@
+/* Định dạng tổng quát */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Đảm bảo body và html chiếm toàn bộ màn hình */
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Nền nhẹ của FPT để đồng bộ với các phần khác */
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #2575fc; /* Màu xanh chính của FPT */
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(37, 117, 252, 0.3); /* Đổ bóng màu xanh FPT */
+    transition: background-color 0.3s ease;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff; /* Chữ trắng cho tiêu đề sidebar */
+}
+
+.sidebar a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 0; /* Tăng padding để dễ nhìn hơn */
+    text-align: center;
+    border-bottom: 1px solid #1a5bb8; /* Đổi màu viền thành xanh đậm hơn */
+    font-size: 1rem;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #1a5bb8; /* Xanh đậm hơn khi hover */
+    color: #ffffff;
+    padding-left: 15px; /* Tạo hiệu ứng trượt nhẹ khi hover */
+}
+
+/* Phần nội dung chính */
+.content {
+    margin-left: 250px; /* Khoảng cách chừa cho sidebar */
+    padding: 40px;
+    box-sizing: border-box;
+    width: calc(100% - 250px);
+    background-color: #f8f9fa;
+    overflow-y: auto;
+    animation: fadeInContainer 1s ease-out forwards 0.5s;
+    opacity: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #2575fc; /* Màu xanh FPT cho tiêu đề */
+    margin-bottom: 20px;
+}
+
+/* Bảng lịch sử điểm danh */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff; /* Nền trắng để nổi bật */
+    box-shadow: 0 2px 12px rgba(37, 117, 252, 0.1); /* Đổ bóng màu xanh FPT nhẹ */
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #2575fc; /* Đường viền màu xanh FPT */
+}
+
+table th {
+    background-color: #2575fc; /* Nền xanh FPT cho header */
+    color: #ffffff; /* Chữ trắng */
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9fafe; /* Màu nền nhẹ màu xanh FPT cho hàng chẵn */
+}
+
+table tr:hover {
+    background-color: #e0eaff; /* Nền đổi màu nhẹ khi hover */
+}
+
+table td {
+    font-size: 14px;
+}
+
+/* Thông báo nếu không có dữ liệu */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none; /* Loại bỏ đổ bóng khi chuyển sang chế độ di động */
+    }
+
+    .sidebar a {
+        padding: 10px 0; /* Giảm padding để phù hợp màn hình nhỏ */
+        border-bottom: 1px solid #1a5bb8; /* Giữ màu viền đồng nhất */
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* Hiệu ứng fade-in cho nội dung */
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

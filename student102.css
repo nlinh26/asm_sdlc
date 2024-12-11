@@ -1,0 +1,127 @@
+/* Reset margin, padding và box-sizing */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Đảm bảo body và html chiếm toàn bộ màn hình */
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Nền nhẹ của FPT để đồng bộ với form */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #2575fc; /* Màu xanh chính của FPT */
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(37, 117, 252, 0.3); /* Đổ bóng màu xanh FPT */
+    transition: background-color 0.3s ease;
+}
+
+/* Liên kết trong Sidebar */
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px; /* Tăng padding để dễ nhìn hơn */
+    font-size: 1rem;
+    transition: background 0.3s, padding-left 0.3s;
+}
+
+/* Hover liên kết trong Sidebar */
+.sidebar a:hover {
+    background-color: #1a5bb8; /* Xanh đậm hơn khi hover */
+    padding-left: 30px; /* Tăng padding trái để tạo hiệu ứng trượt */
+}
+
+/* Nội dung chính */
+.content {
+    margin-left: 240px; /* Khoảng cách chừa cho sidebar */
+    padding: 30px;
+    background-color: #f4f4f4;
+    min-height: 100vh; /* Chiều cao tối thiểu */
+    box-sizing: border-box;
+    animation: fadeInContainer 1s ease-out forwards 0.5s;
+    opacity: 0;
+}
+
+/* Bảng trong nội dung chính */
+.content table {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    border-collapse: collapse; /* Gộp đường viền */
+    background-color: #ffffff; /* Nền trắng để nổi bật */
+    box-shadow: 0 2px 12px rgba(37, 117, 252, 0.1); /* Đổ bóng màu xanh FPT nhẹ */
+    margin-top: 20px;
+}
+
+/* Header và ô trong bảng */
+.content th, .content td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #2575fc; /* Đường viền màu xanh FPT */
+}
+
+/* Header bảng */
+.content th {
+    background-color: #2575fc; /* Nền xanh FPT */
+    color: #ffffff; /* Chữ trắng */
+    text-transform: uppercase; /* Viết hoa */
+    font-size: 1rem;
+}
+
+/* Hàng chẵn trong bảng */
+.content tr:nth-child(even) {
+    background-color: #f9fafe; /* Nền nhẹ màu xanh FPT */
+}
+
+/* Hover hàng trong bảng */
+.content tr:hover {
+    background-color: #e0eaff; /* Nền đổi màu nhẹ khi hover */
+}
+
+/* Tiêu đề bảng */
+.content caption {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* Căn giữa tiêu đề */
+    color: #2575fc; /* Màu xanh FPT */
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none; /* Loại bỏ đổ bóng khi chuyển sang chế độ di động */
+    }
+
+    .sidebar a {
+        padding: 10px 20px; /* Giảm padding để phù hợp màn hình nhỏ */
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .content table {
+        font-size: 0.9rem; /* Giảm kích thước chữ trong bảng */
+    }
+}
+
+/* Hiệu ứng fade-in cho nội dung */
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

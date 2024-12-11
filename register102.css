@@ -1,0 +1,110 @@
+/* Reset margin, padding và box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nền và hiệu ứng fade-in */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Màu nền nhẹ của FPT */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Phần chứa form */
+.container {
+    background: #ffffff; /* Nền trắng để nổi bật */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(37, 117, 252, 0.2); /* Sử dụng màu xanh FPT cho shadow */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInContainer 1s ease-out forwards 0.5s;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2575fc; /* Màu xanh chính của FPT */
+}
+
+/* Input và Select */
+input[type="text"], input[type="password"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #2575fc; /* Viền xanh FPT */
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9fafe; /* Nền input nhẹ */
+}
+
+/* Focus hiệu ứng */
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    border-color: #0056b3; /* Xanh đậm khi focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5); /* Hiệu ứng đổ bóng khi focus */
+}
+
+/* Nút */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #2575fc; /* Màu xanh FPT */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover nút */
+button:hover {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Gradient xanh FPT */
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng liên kết */
+a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #2575fc; /* Màu xanh FPT */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover liên kết */
+a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Xanh đậm khi hover */
+}
+
+/* Hiệu ứng fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,116 @@
+/* Cấu trúc chung của trang */
+body {
+    font-family: 'Roboto', sans-serif; /* Thay font chữ để giống FPT Poly */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Màu nền sáng */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #0072b1; /* Màu xanh đặc trưng của FPT Poly */
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid #005a8b; /* Màu viền sáng hơn */
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #005a8b; /* Màu khi hover */
+}
+
+/* Phần nội dung chính */
+.content {
+    margin-left: 250px;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Form thêm lớp học */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng mạnh hơn */
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+form input[type="number"] {
+    width: 50%;
+}
+
+form button {
+    background-color: #0072b1; /* Màu xanh như trong sidebar */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #005a8b; /* Màu khi hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    form input[type="number"] {
+        width: 100%;
+    }
+}

@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Thay phông chữ để giống FPT Poly */
+    background-color: #f4f4f4; /* Màu nền sáng hơn */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 30px auto;
+    max-width: 1200px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Viền bo tròn lớn hơn */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow mạnh hơn */
+}
+
+h1 {
+    text-align: center;
+    color: #3b3b3b; /* Màu tiêu đề đậm hơn */
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #0072b1; /* Màu chính xanh của FPT Poly */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #005a8b; /* Màu khi hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table th, table td {
+    border: 1px solid #e1e1e1; /* Màu viền nhạt */
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    color: #333; /* Màu chữ đậm hơn */
+}
+
+table th {
+    background-color: #0072b1; /* Màu nền tiêu đề bảng */
+    color: #ffffff;
+    font-weight: 700;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f8f8; /* Nền bảng theo kiểu xen kẽ */
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table a {
+    color: #0072b1;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.logout-link {
+    display: inline-block;
+    background: #e53935; /* Màu đỏ cho nút đăng xuất */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.logout-link:hover {
+    background: #c62828;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
